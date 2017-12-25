@@ -1,0 +1,20 @@
+<div class="col-md-12">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input tyue="text" class="form-control" [formControl]="contactForm.controls['name']" placeholder="Enter your full Name">
+      <small *ngIf="contactForm.controls['name'].touch && contactForm.controls['name'].dirty">This field is required</small>
+    </div>
+    <div class="form-group">
+        <label>Full Name</label>
+        <input tyue="text" class="form-control" [formControl]="contactForm.controls['address']" placeholder="Enter your Address">
+    </div>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input tyue="email" class="form-control" [formControl]="contactForm.controls['email']" placeholder="Enter your Email id">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default" >Submit</button>
+    </div>
+  </form>
+</div>
